@@ -1,49 +1,55 @@
-# EX 8 C program to perform multiplication and division of two numbers using functions (without argument and without return type).
+# EX 8 C program for Multiplication and Division of two numbers using functions (Without argument and with return type)
 ## DATE:
 ## AIM:
-To write a C program to perform multiplication and division of two numbers using functions (without argument and without return type).
+To write a C program for Multiplication and Division of two numbers using functions (Without argument and with return type)
 
 ## Algorithm
-1.Start the program. 
-2.Declare two global variables for the numbers.
-3.Create two functions — one for multiplication and one for division — without arguments and return type. 
-4.In main(), take input for the two numbers, then call both functions. 
-5.End the program.
+
+1.Start the program and declare function prototypes multiply() and divide().
+
+2.In the main() function, call the multiply() function to get the multiplication result and store it in a variable.
+
+3.Display the multiplication result using printf.
+
+4.Call the divide() function, which reads two numbers, performs division, and returns the result.
+
+5.Print the division result and end the program.
 
 ## Program:
 ```
-/*
-Program to perform multiplication and division of two numbers using functions (without argument and without return type).
-Developed by: Santhosh kumar B
-RegisterNumber:  212223060249
-*/
-#include <stdio.h>
-
-int num1, num2;
-
-void multiply() {
-    printf("Multiplication: %d\n", num1 * num2);
+#include<stdio.h>
+int multiply();
+int divide();
+int main()
+{
+    int r,s;
+    r=multiply();
+    printf("Multiplication: %d\n",r);
+    s=divide();
+    printf("Division: %d",s);
+    
+}
+int multiply()
+{
+    int a,b,c;
+    scanf("%d%d",&a,&b);
+    c=a*b;
+    return c;
+}
+int divide()
+{
+    int d,e,f;
+    scanf("%d%d",&d,&e);
+    f=d/e;
+    return f;
 }
 
-void divide() {
-    if(num2 != 0)
-        printf("Division: %.2f\n", (float)num1 / num2);
-    else
-        printf("Division by zero is not allowed.\n");
-}
-
-int main() {
-    scanf("%d%d", &num1, &num2);
-    multiply();
-    divide();
-    return 0;
-}
+    
 ```
 
 ## Output:
-<img width="374" height="198" alt="image" src="https://github.com/user-attachments/assets/13d25f53-ecb1-4462-b493-1d8452b18b28" />
 
-
+<img width="603" height="236" alt="Screenshot 2026-03-19 131615" src="https://github.com/user-attachments/assets/e9096a9f-dba5-413e-adbc-50c976fee1a9" />
 
 
 ## Result:
